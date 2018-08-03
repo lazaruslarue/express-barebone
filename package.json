@@ -4,11 +4,16 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon http-server.js",
+    "start-express": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "express": "^4.14.0"
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "nodemon": "^1.18.3",
+    "ws": "^6.0.0"
   }
 }
