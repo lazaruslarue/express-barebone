@@ -1,6 +1,9 @@
 const express = require('express');
 
 const apiRouter = express.Router();
+// todo: Example for body-parser
+// const bodyParser = require('body-parser')
+// app.use(bodyParser.json());
 
 /* 
 
@@ -17,13 +20,13 @@ const apiRouter = express.Router();
   try some routes!
   
 */
-apiRouter.get('/success', function(req, res) {
+apiRouter.get('/success', function (req, res) {
   console.log('first request', req.route.path);
   // TODO: send a success code
   res.sendStatus(200);
 });
 
-apiRouter.get('/badrequest', function(req, res) {
+apiRouter.get('/badrequest', function (req, res) {
   res.sendStatus(400);
 });
 
@@ -40,9 +43,9 @@ apiRouter.get('/badrequest', function(req, res) {
 
 
   get some data!
-  const bookShelf = require('./models/bookShelf');
+  const bookShelf = require('../models/bookShelf');
 
-  */
+*/
 apiRouter.get('/all', (req, res) => {
   /*
     get all books

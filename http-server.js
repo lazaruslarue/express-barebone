@@ -1,11 +1,13 @@
 const http = require('http');
 
 const server = http.createServer((request, response) => {
-  console.log('request recieved... now what?', request);
-
   response.writeHead(200, 'Content-type/html');
-  response.end('howdy, world!>\n');
-  // response.end('<h1>howdy, world!</h1>\n');
+  response.write('<html>');
+  response.write('<body>');
+  response.write('<h1>Hello, World!</h1>');
+  response.write('</body>');
+  response.write('</html>');
+  response.end();
 });
 
 server.listen(3000, () => {
@@ -17,6 +19,20 @@ server.listen(3000, () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+response.end('<h1>howdy, world!</h1>\n');
 
 
 
